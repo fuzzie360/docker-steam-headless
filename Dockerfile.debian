@@ -202,9 +202,12 @@ RUN \
     echo "**** Update apt database ****" \
         && apt-get update \
     && \
-    echo "**** Install pulseaudio requirements ****" \
+    echo "**** Install pipewire requirements ****" \
         && apt-get install -y --no-install-recommends \
-            pulseaudio \
+            pulseaudio-utils \
+            pipewire-audio \
+            pipewire-pulse \
+            wireplumber \
             alsa-utils \
             libasound2 \
             libasound2-plugins \
